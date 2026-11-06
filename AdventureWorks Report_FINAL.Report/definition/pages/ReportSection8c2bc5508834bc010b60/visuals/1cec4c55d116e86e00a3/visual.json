@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "1cec4c55d116e86e00a3",
   "position": {
-    "x": 1048.736531200735,
-    "y": 487.01234299932992,
+    "x": 1049.1903510866969,
+    "y": 483.01886792452831,
     "z": 11000,
     "height": 65.137123939223088,
     "width": 195.41137181766925,
@@ -23,11 +23,11 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Total Revenue"
+                  "Property": "Revenue Target"
                 }
               },
-              "queryRef": "Measure Table.Total Revenue",
-              "nativeQueryRef": "Total Revenue"
+              "queryRef": "Measure Table.Revenue Target",
+              "nativeQueryRef": "Revenue Target"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Total Revenue"
+                "Property": "Revenue Target"
               }
             },
             "direction": "Descending"
