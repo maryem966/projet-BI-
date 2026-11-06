@@ -218,10 +218,8 @@ table 'Measure Table'
 	measure 'Total Profit' =
 			
 			[Total Revenue] - [Total Cost]
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: #,0.00\ %;-#,0.00\ %;#,0.00\ %
 		lineageTag: 9602bde8-742a-4769-af27-4aa18068628b
-
-		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	measure 'YTD Revenue' = ```
 			
@@ -394,6 +392,16 @@ table 'Measure Table'
 		lineageTag: 12f6279d-41ec-4b4e-b553-424cf17ade8c
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Profit Margin' =
+			
+			DIVIDE(
+			    [Total Profit],
+			    [Total Revenue],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 59794c8a-6a88-4345-85a2-68ab0c3dc86c
 
 	partition 'Measure Table-a4ed3097-3fd0-4b75-a9e4-accd8305ef84' = m
 		mode: import
