@@ -395,6 +395,13 @@ table 'Measure Table'
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
+	measure 'Profit Margin' = ```
+			
+			    DIVIDE([Total Profit], [Total Revenue], 0)
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 957e2034-b161-40bc-a6b1-8c232e80b54e
+
 	partition 'Measure Table-a4ed3097-3fd0-4b75-a9e4-accd8305ef84' = m
 		mode: import
 		source =

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "482fb87d121118934e2e",
   "position": {
     "x": 64.427001569858717,
@@ -45,7 +45,8 @@
                 }
               },
               "queryRef": "Product Categories Lookup.CategoryName",
-              "nativeQueryRef": "CategoryName"
+              "nativeQueryRef": "CategoryName",
+              "active": true
             },
             {
               "field": {
@@ -59,7 +60,8 @@
                 }
               },
               "queryRef": "Product Subcategories Lookup.SubcategoryName",
-              "nativeQueryRef": "SubcategoryName"
+              "nativeQueryRef": "SubcategoryName",
+              "active": true
             },
             {
               "field": {
@@ -73,7 +75,8 @@
                 }
               },
               "queryRef": "Product Lookup.ProductName",
-              "nativeQueryRef": "ProductName"
+              "nativeQueryRef": "ProductName",
+              "active": true
             }
           ]
         }
@@ -150,7 +153,30 @@
           }
         ],
         "root": {
-          "isToggled": true
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Bikes'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Cleaners'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            }
+          ]
         }
       }
     ],

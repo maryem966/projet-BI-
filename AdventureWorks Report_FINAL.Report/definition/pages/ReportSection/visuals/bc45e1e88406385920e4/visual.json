@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "bc45e1e88406385920e4",
   "position": {
     "x": 738.88888888888891,
@@ -10,7 +10,7 @@
     "tabOrder": 7000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -42,11 +42,29 @@
                       "Entity": "Measure Table"
                     }
                   },
-                  "Property": "Total Orders"
+                  "Property": "Total Profit"
                 }
               },
-              "queryRef": "Measure Table.Total Orders",
-              "nativeQueryRef": "Total Orders"
+              "queryRef": "Measure Table.Total Profit",
+              "nativeQueryRef": "Total Profit"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure Table"
+                    }
+                  },
+                  "Property": "Profit Margin"
+                }
+              },
+              "queryRef": "Measure Table.Profit Margin",
+              "nativeQueryRef": "Profit Margin"
             }
           ]
         }
@@ -61,7 +79,7 @@
                     "Entity": "Measure Table"
                   }
                 },
-                "Property": "Total Orders"
+                "Property": "Total Profit"
               }
             },
             "direction": "Descending"
@@ -272,7 +290,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "Filter2c4a461ddc05933b39c2",
+        "name": "5e73c984700d02b36e34",
         "field": {
           "Column": {
             "Expression": {
@@ -283,22 +301,35 @@
             "Property": "CategoryName"
           }
         },
-        "type": "Advanced",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
+        "type": "Categorical"
+      },
+      {
+        "name": "641b1906060d088230bb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
               }
-            }
-          ]
-        }
+            },
+            "Property": "Total Profit"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "78cab021d4ced68a1eb2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure Table"
+              }
+            },
+            "Property": "Profit Margin"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
